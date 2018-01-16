@@ -16,13 +16,13 @@ node('master') {
         }
     }
     catch(error){
-        emailext body: "project build error is here: ${env.BUILD_URL}", 
+        mail body: "project build error is here: ${env.BUILD_URL}", 
                         subject: 'pipeline test email: fail', 
                         to: 'cxu@acr.org'
         throw error
     }
     finally{
-        emailext body: 'project build successful', 
+        mail body: 'project build successful', 
                         subject: 'pipeline test email: successful', 
                         to: 'cxu@acr.org'
     }
