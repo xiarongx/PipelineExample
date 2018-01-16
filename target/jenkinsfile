@@ -7,7 +7,7 @@ node('master') {
         }
 
         stage('Build'){
-            bat '"C:\Users\cxu\tools\nuget.exe" restore HelloWorld.sln'
+            bat 'nuget restore HelloWorld.sln'
             bat "\"${tool 'MSBuild'}\" HelloWorld.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
         }
 
