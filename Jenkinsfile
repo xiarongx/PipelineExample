@@ -12,7 +12,7 @@ node('master') {
         }
 
         stage('Archive'){
-            archive '*'
+            archiveArtifacts '*.*'
         }
     }
     catch(error){
