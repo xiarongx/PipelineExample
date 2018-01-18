@@ -12,7 +12,7 @@ node('master') {
         }
 
         stage('Archive'){
-            archiveArtifacts 'HelloWorld\bin\Release\*.*'
+            archiveArtifacts '\HelloWorld\bin\Release\*.*'
         }
     }
     catch(error){
