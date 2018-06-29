@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace HelloWorld
 {
-    class Program
+    public class Program
     {
+        public static string password = "123456";
         static void Main(string[] args)
         {
+            Console.WriteLine(password);
             Console.WriteLine("Hello World!");
             Console.Read();
         }
